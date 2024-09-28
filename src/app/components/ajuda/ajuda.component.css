@@ -1,0 +1,76 @@
+.titulo {
+    color: #243746;
+  }
+
+  .subtitulo {
+    color: #243746;
+    margin-bottom: 10px;
+  }
+
+  
+
+.nome {
+  margin-bottom: 15px;
+  margin-right: 0px;
+  width: 330px;
+  
+}
+
+.email {
+  margin-bottom: 15px;
+  margin-right: 0px;
+  width: 330px;
+  
+}
+
+.telefone {
+  margin-bottom: 15px;
+  margin-right: 0px;
+  width: 330px;
+  
+}
+
+.espaçamento {
+  margin-bottom: 30px;
+  color: #243746;
+  margin-left: 345px;
+}
+
+.modelo {
+  margin-bottom: 25px;
+  width: 430px;
+  justify-content: center;
+}
+
+.patrimonio {
+  margin-bottom: 25px;
+  margin-left: 120px;
+  width: 500px;
+}
+
+.localizacao {
+  margin-bottom: 25px;
+  margin-right: 0px;
+  width: 940px;
+  
+}
+
+.status {
+  margin-bottom: 30px;
+  width: 940px;
+}
+
+.salvar {
+  margin-left: 90%;
+}
+
+.botoes {
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.video {
+  margin-top: 50px;
+}

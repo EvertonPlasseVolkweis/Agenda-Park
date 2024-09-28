@@ -1,0 +1,34 @@
+.localizacao {
+    width: 100%;
+}
+
+:host ::ng-deep .p-fluid .p-calendar .p-inputtext {
+    height: 56px;
+}
+
+.p-inputtext {
+    height: 56px;
+}
+
+.mat-form-field {
+    width: 100%;
+}
+
+.botoes {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.grid {
+    margin-top: 15px !important;
+}
+
+:host ::ng-deep .mat-dialog-container {
+    height: 90vh !important;
+}
+
+.modal {
+    height: 50vh !important;
+}

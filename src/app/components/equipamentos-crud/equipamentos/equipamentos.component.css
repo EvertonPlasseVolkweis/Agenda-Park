@@ -1,0 +1,75 @@
+
+
+.nome {
+    margin-bottom: 25px;
+    margin-right: 0px;
+    width: 940px;
+    
+}
+
+.tipo {
+    margin-bottom: 25px;
+    margin-right: 0px;
+    width: 940px;
+    
+}
+
+.marca {
+    margin-bottom: 25px;
+    margin-right: 0px;
+    width: 940px;
+    
+}
+
+.espaçamento {
+    margin-bottom: 30px;
+}
+
+.modelo {
+    margin-bottom: 25px;
+    width: 940px;
+    justify-content: center;
+}
+
+.patrimonio {
+    margin-bottom: 25px;
+    width: 940px;
+}
+
+.localizacao {
+    margin-bottom: 25px;
+    margin-right: 0px;
+    width: 940px;
+    
+}
+
+.status {
+    margin-bottom: 30px;
+    width: 940px;
+}
+
+.salvar {
+    margin-left: 90%;
+}
+
+.botoes {
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.equips {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+.margem {
+    padding: 3rem;
+}

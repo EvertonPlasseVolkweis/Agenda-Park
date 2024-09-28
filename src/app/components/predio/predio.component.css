@@ -1,0 +1,43 @@
+.espaçamento {
+    margin-top: 140px;
+}
+
+.nome {
+    margin-bottom: 35px;
+    margin-right: 0px;
+    width: 940px;
+    
+}
+
+.endereço {
+    margin-bottom: 198px;
+    margin-right: 0px;
+    width: 940px;
+    
+}
+
+.salvar {
+    margin-left: 90%;
+}
+
+.botoes {
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+h2 {
+    text-align: center;
+}
+
+.equips {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.margem {
+    padding: 3rem;
+}

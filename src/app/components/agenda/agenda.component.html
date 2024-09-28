@@ -1,0 +1,13 @@
+<div class="margem">
+    <div class="spinner" *ngIf="loading; else elseBlock">
+        <mat-spinner></mat-spinner>
+    </div>
+    <div class="calendar">
+        <ng-template #elseBlock>
+            <div class="botao-novo">
+                <button pButton (click)="openDialog('item')">Novo Agendamento</button>
+            </div>
+            <full-calendar *ngIf="!loading" class="calendar" [options]="calendarOptions"></full-calendar>
+        </ng-template>
+    </div>
+</div>

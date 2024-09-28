@@ -1,0 +1,69 @@
+<div class="margem">
+  <div class="espaçamento">
+    <h2>Lista de Solicitações de Agendamento</h2>
+  </div>
+  
+  <div class="div-principal" fxLayout="column" fxLayoutAlign="center end">
+  
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+  
+      <ng-container matColumnDef="dataHoraChegada">
+        <th mat-header-cell *matHeaderCellDef> Data de Entrada </th>
+        <td mat-cell *matCellDef="let element"> {{ element.dataHoraChegada | date : 'dd/MM/yyyy HH:mm' }} </td>
+      </ng-container>
+  
+      <ng-container matColumnDef="dataHoraSaida">
+        <th mat-header-cell *matHeaderCellDef> Data de Saída </th>
+        <td mat-cell *matCellDef="let element">  {{ element.dataHoraSaida | date : 'dd/MM/yyyy HH:mm' }} </td>
+      </ng-container>
+  
+      <ng-container matColumnDef="laboratorio">
+        <th mat-header-cell *matHeaderCellDef> Laboratório </th>
+        <td mat-cell *matCellDef="let element"> {{element.laboratorio.nome}} </td>
+      </ng-container>
+  
+      <ng-container matColumnDef="atividade">
+        <th mat-header-cell *matHeaderCellDef> Atividade </th>
+        <td mat-cell *matCellDef="let element"> {{element.atividade}} </td>
+      </ng-container>
+  
+      <ng-container matColumnDef="empresaCurso">
+        <th mat-header-cell *matHeaderCellDef> Empresa </th>
+        <td mat-cell *matCellDef="let element"> {{element.empresaCurso}} </td>
+      </ng-container>
+  
+      <ng-container matColumnDef="instituicaoCurso">
+        <th mat-header-cell *matHeaderCellDef> Instituicao </th>
+        <td mat-cell *matCellDef="let element"> {{element.instituicaoCurso}} </td>
+      </ng-container>
+  
+      <ng-container matColumnDef="responsavel">
+        <th mat-header-cell *matHeaderCellDef> Responsavel </th>
+        <td mat-cell *matCellDef="let element"> {{element.responsavel}} </td>
+      </ng-container>
+  
+      <ng-container matColumnDef="observacao">
+        <th mat-header-cell *matHeaderCellDef> Observação </th>
+        <td mat-cell *matCellDef="let element"> {{element.observacao}} </td>
+      </ng-container>
+  
+      <ng-container matColumnDef="editEmployee">
+        <th mat-header-cell *matHeaderCellDef>Aceitar</th>
+        <td mat-cell *matCellDef="let element">
+          <button pButton type="button" class="p-button-rounded p-button-text" icon="pi pi-check" (click)="aceitar(element.id)">
+          </button>
+        </td>
+      </ng-container>
+      <ng-container matColumnDef="deleteEmployee">
+        <th mat-header-cell *matHeaderCellDef>Recusar</th>
+        <td mat-cell *matCellDef="let element">
+          <button pButton type="button" class="p-button-rounded p-button-text p-button-danger" icon="pi pi-times-circle" (click)="recusar(element.id, element.motivo)">
+          </button>
+        </td>
+      </ng-container>
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  
+  </div>
+</div>

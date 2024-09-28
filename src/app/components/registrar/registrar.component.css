@@ -1,0 +1,37 @@
+.div-principal {
+    height: 100%;
+}
+
+.matcard {
+    background-color: rgb(35 54 69);
+    max-width: 60em;
+    height: auto;
+}
+
+.p-inputtext-lg{
+    margin: 20px;
+    width: 350px;
+}
+
+.login {
+    font-size: 35px;
+    color: white;
+    margin: 30px;
+}
+
+.p-button-secondary {
+    margin: 20px;
+    width: 35%;
+}
+
+:host ::ng-deep .p-password input {
+    width: 350px;
+}
+
+:host ::ng-deep .p-inputmask {
+    width: 350px;
+}
+
+.logo {
+    width: 200px;
+}

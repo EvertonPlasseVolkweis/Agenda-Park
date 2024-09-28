@@ -1,0 +1,33 @@
+<div class="div-principal" fxLayout="column" fxLayoutAlign="center center">
+    <mat-card class="matcard">
+        <div fxLayout="column" fxLayoutAlign="space-between center" class="spinner" *ngIf="loading; else elseBlock">
+            <img class="logo" src="assets/img/BioparkEducaçãoWhite.png">
+            <mat-spinner></mat-spinner>
+        </div>
+        <ng-template #elseBlock>
+            <div fxLayout="column" fxLayoutAlign="space-between center">
+                <img class="logo" src="assets/img/BioparkEducaçãoWhite.png">
+                <b class="login">Registrar Usuário</b>
+            </div>
+            <form fxLayout="column" fxLayoutAlign="space-between center" [formGroup]="formularioRegistrar">
+                <div class="grid">
+                    <div class="col-12 lg:col-6"> 
+                        <input type="text" pInputText class="p-inputtext-lg"  placeholder="Nome" formControlName="nome">
+                    </div>
+                    <div class="col-12 lg:col-6">
+                        <input type="text" pInputText class="p-inputtext-lg"  placeholder="Email" formControlName="email">
+                    </div>
+                    <div class="col-12 lg:col-6">
+                        <p-password class="p-inputtext-lg" [feedback]="false" [toggleMask]="true" placeholder="Senha" formControlName="senha"></p-password>
+                    </div>
+                    <div class="col-12 lg:col-6">
+                        <p-inputMask class="p-inputtext-lg"  formControlName="telefone" mask="(99)9?9999-9999" placeholder="Telefone"></p-inputMask>
+                    </div>
+                </div>
+            </form>
+            <div fxLayout="column" fxLayoutAlign="space-between center">
+                <button pButton type="button" label="Registrar Usúario" class="p-button-secondary" (click)="registraUsuario()"></button>
+            </div>
+        </ng-template>
+    </mat-card>
+</div>

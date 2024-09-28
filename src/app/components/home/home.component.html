@@ -1,0 +1,47 @@
+<div class="div-principal" fxLayout="column" fxLayoutAlign="center center">
+    <mat-card class="matcard2">
+        <div fxLayout="column" fxLayoutAlign="space-between center" class="spinner" *ngIf="loading; else elseBlock">
+            <mat-spinner></mat-spinner>
+        </div>
+        <ng-template #elseBlock>
+            <h1>Agenda do Dia</h1>
+            <h1 *ngIf="listaAgendaDoDia.length === 0">Nenhum Agendamento para este dia</h1>
+            <ng-container *ngFor="let item of listaAgendaDoDia; let i = index">
+                <div fxLayout="column">
+                    <mat-card class="matcard">
+                        <div fxLayout="row">
+                            <div class="itens" fxLayout="column">
+                                <p>Atividade</p>
+                                <p>{{item.atividade}}</p>
+                            </div>
+                            <div class="itens" fxLayout="column">
+                                <p>Empresa</p>
+                                <p>{{item.empresaCurso}}</p>
+                            </div>
+                            <div class="itens" fxLayout="column">
+                                <p>Responsável</p>
+                                <p>{{item.responsavel}}</p>
+                            </div>
+                            <div class="itens" fxLayout="column">
+                                <p>Horário Chegada</p>
+                                <p>{{item.dataHoraChegada | date : 'HH:mm'}}</p>
+                            </div>
+                            <div class="itens" fxLayout="column">
+                                <p>Horário Saída</p>
+                                <p>{{item.dataHoraSaida | date : 'HH:mm'}}</p>
+                            </div>
+                            <div class="itens" fxLayout="column">
+                                <p>Laboratório</p>
+                                <p>{{nomeLab}}<p>
+                            </div>
+                            <div class="itens" fxLayout="column">
+                                <p>Observação</p>
+                                <p>{{item.observacao}}</p>
+                            </div>
+                        </div>
+                    </mat-card>
+                </div>
+            </ng-container>
+        </ng-template>
+    </mat-card>
+</div>

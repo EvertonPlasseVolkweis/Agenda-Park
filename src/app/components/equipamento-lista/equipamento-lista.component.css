@@ -1,0 +1,25 @@
+table {
+  width: 100%;
+}
+
+button {
+  margin: 16px 8px 30px;
+}
+
+.titulo {
+  color: #243746;
+  margin-right: 180px;
+}
+
+.spinner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.margem {
+  padding: 3rem;
+}

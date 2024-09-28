@@ -1,0 +1,41 @@
+<div class="margem">
+    <div class="espaçamento">
+        <h2>Cadastrar prédios</h2>
+    </div>
+    <div class="equips">
+        <form [formGroup]="formularioPredio">
+            <div class="grid p-fluid">
+                <div class="col-12 md:col-12">
+                    <div class="nome">
+                        <div class="p-inputgroup">
+                            <span class="p-float-label">
+                                <input type="text" id="nome" pInputText formControlName="nome">
+                                <label for="nome">Nome</label>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid p-fluid">
+                <div class="col-12 md:col-12">
+                    <div class="endereço">
+                        <div class="p-inputgroup">
+                            <span class="p-float-label">
+                                <input formControlName="endereco" type="text" pInputText id="endereco">
+                                <label for="nome">Endereço</label>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    
+    <div>
+        <div class="botoes">
+            <button (click)="telaTabelaPredio()" pButton type="button" label="Voltar"
+                class="p-button-danger p-button-outlined"></button>
+            <button (click)="salvarPredio()" pButton type="button" label="Salvar" class="p-button-outlined"></button>
+        </div>
+    </div>
+</div>

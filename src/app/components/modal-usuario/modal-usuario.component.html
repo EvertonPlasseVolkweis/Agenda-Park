@@ -1,0 +1,12 @@
+<h4>Selecione um Nível de Acesso</h4>
+<form [formGroup]="formularioNivelAcesso">
+    <mat-form-field appearance="fill">
+        <mat-label>Nível de Acesso</mat-label>
+        <mat-select formControlName="nivelAcesso">
+          <mat-option *ngFor="let food of foods" [value]="food.value">
+            {{food.viewValue}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+</form>
+<button pButton type="button" label="Salvar" (click)="salvaNivelAcesso()"></button>

@@ -1,0 +1,23 @@
+<div class="div-principal" fxLayout="column" fxLayoutAlign="center center">
+    <mat-card class="matcard">
+        <div fxLayout="column" fxLayoutAlign="space-between center" class="spinner" *ngIf="loading; else elseBlock">
+            <img class="logo" src="assets/img/BioparkEducaçãoWhite.png">
+            <mat-spinner></mat-spinner>
+        </div>
+        <ng-template #elseBlock>
+            <div fxLayout="column" fxLayoutAlign="space-between center">
+                <img class="logo" src="assets/img/BioparkEducaçãoWhite.png">
+                <b class="login">Login</b>
+                <form fxLayout="column" fxLayoutAlign="space-between center" [formGroup]="formularioLogin">
+                    <input type="text" pInputText class="p-inputtext-lg" placeholder="Email" formControlName="email">
+                    <p-password class="p-inputtext-lg" [feedback]="false" [toggleMask]="true" placeholder="Senha"
+                        formControlName="senha"></p-password>
+                </form>
+                <button pButton type="button" label="Entrar" class="p-button-secondary"
+                    (click)="realizaLogin()"></button>
+                <button pButton type="button" label="Registrar" class="p-button-secondary"
+                    (click)="telaRegistrar()"></button>
+            </div>
+        </ng-template>
+    </mat-card>
+</div>

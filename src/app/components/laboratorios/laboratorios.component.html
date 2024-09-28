@@ -1,0 +1,86 @@
+<div class="margem">
+    <div class="espaçamento">
+        <h2>Cadastrar Laboratório</h2>
+    </div>
+    <div class="equips">
+        <form [formGroup]="formularioLaboratorio">
+            <div class="grid p-fluid">
+                <div class="col-12 md:col-12">
+                    <div class="nome">
+                        <div class="p-inputgroup">
+                            <span class="p-float-label">
+                                <input formControlName="nome" type="text" pInputText id="nome">
+                                <label for="nome">Nome</label>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid p-fluid">
+                <div class="col-12 md:col-12">
+                    <div class="endereço">
+                        <div class="p-inputgroup">
+    
+                            <span class="p-float-label">
+                                <input formControlName="sigla" type="text" pInputText id="sigla">
+                                <label for="sigla">Sigla</label>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid p-fluid">
+                <div class="col-12 md:col-12">
+                    <div class="m2">
+                        <div class="p-inputgroup" fxLayoutAlign="raw">
+                            <span class="p-float-label">
+                                <input formControlName="m2" type="number" pInputText id="m2">
+                                <label for="m2">Tamanho (m²)</label>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid p-fluid">
+                <div class="col-12 md:col-12">
+                    <div class="endereço">
+                        <div class="p-inputgroup">
+                            <span class="p-float-label">
+                                <input formControlName="capacidade" type="number" pInputText id="capacidade">
+                                <label for="capacidade">Capacidade (Pessoas)</label>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid p-fluid">
+                <div class="col-12" style="display: flex">
+                    <div class="col-9">
+                        <div class="localizacao">
+                            <input formControlName="localiza_dentro_Predio" type="text" pInputText id="localiza_dentro_Predio" placeholder="Localização">
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <mat-form-field appearance="fill" class="predios">
+                            <mat-label>Prédios</mat-label>
+                            <mat-select formControlName="predioid">
+                                <mat-option *ngFor="let item of listaPredio" [value]="item.id"
+                                    (click)="setIdPredio(item.id)">
+                                    {{item.nome}}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    
+    <div>
+        <div class="botoes">
+            <button (click)="telaTabelaLaboratorios()" pButton type="button" label="Voltar"
+                class="p-button-danger p-button-outlined"></button>
+            <button (click)="salvarLaboratorio()" pButton type="button" label="Salvar" class="p-button-outlined"></button>
+        </div>
+    </div>
+</div>

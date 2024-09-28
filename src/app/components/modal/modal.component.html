@@ -1,0 +1,118 @@
+<div class="spinner" *ngIf="loading; else elseBlock">
+    <mat-spinner></mat-spinner>
+</div>
+<div class="modal">
+    <ng-template #elseBlock>
+        <div class="espaçamento">
+            <h2 *ngIf="data.selecionado">Agendamento</h2>
+            <h2 *ngIf="!data.selecionado">Cadastrar Agendamento</h2>
+        </div>
+        <div>
+            <form [formGroup]="formularioAgendamento">
+                <div class="grid p-fluid">
+                    <div class="col-12 md:col-4">
+                        <div class="nome">
+                            <div class="p-inputgroup">
+                                <span class="p-float-label">
+                                    <input type="text" id="atividade" pInputText formControlName="atividade"> 
+                                    <label for="atividade">Atividade</label>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 md:col-4">
+                        <div class="tipo">
+                            <div class="p-inputgroup">
+                                <span class="p-float-label">
+                                    <input type="text" id="empresaCurso" pInputText formControlName="empresaCurso"> 
+                                    <label for="empresaCurso">Empresa</label>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 md:col-4">
+                        <div class="marca">
+                            <div class="p-inputgroup">
+                                <span class="p-float-label">
+                                    <input type="text" id="instituicaoCurso" pInputText formControlName="instituicaoCurso"> 
+                                    <label for="instituicaoCurso">Setor</label>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid p-fluid">
+                    <div class="col-12 md:col-8">
+                        <div class="localizacao">
+                            <div class="p-inputgroup">
+                                <span class="p-float-label">
+                                    <input type="text" id="observacao" pInputText formControlName="observacao"> 
+                                    <label for="observacao">Observação</label>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 md:col-4">
+                        <div class="modelo">
+                            <div class="p-inputgroup">
+                                <span class="p-float-label">
+                                    <input type="text" id="responsavel" pInputText formControlName="responsavel"> 
+                                    <label for="responsavel">Responsável</label>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid p-fluid">
+                    <div class="col-12 md:col-3">
+                        <div>
+                            <div class="p-inputgroup">
+                                <span class="p-float-label">
+                                    <p-calendar class="localizacao" formControlName="dataHoraChegada" id="dataHoraChegada" [showTime]="true" [showSeconds]="true" inputId="time"></p-calendar>
+                                    <label for="dataHoraChegada">Data Hora Chegada</label>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 md:col-3">
+                        <div>
+                            <div class="p-inputgroup">
+                                <span class="p-float-label">
+                                    <p-calendar class="localizacao" formControlName="dataHoraSaida" id="responsavel" [showTime]="true" [showSeconds]="true" inputId="time"></p-calendar>
+                                    <label for="dataHoraSaida">Data Hora Saida</label>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 md:col-3">
+                        <mat-form-field appearance="fill" class="predios">
+                            <mat-label>Laboratório</mat-label>
+                            <mat-select formControlName="idLaboratorio" [(ngModel)]="laboratorioSelecionado">
+                                <mat-option *ngFor="let item of listaLaboratorios" [value]="item.id"
+                                    (click)="setIdPredio(item.id)">
+                                    {{item.nome}}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                    <div class="col-12 md:col-3">
+                        <mat-form-field appearance="fill">
+                            <mat-label>Equipamentos</mat-label>
+                            <mat-select formControlName="idEquipamentos" [(ngModel)]="listaEquips" multiple>
+                              <mat-option *ngFor="let item of listaEquipamentos" [value]="item.id">{{item.nome}}</mat-option>
+                            </mat-select>
+                          </mat-form-field>
+                    </div>
+                </div>
+            </form>
+        </div>
+        
+        <div>
+            <div class="botoes">
+                <button (click)="telaTabelaAgendamento()" mat-dialog-close pButton type="button" label="Voltar" class="p-button-danger"></button>
+                <button *ngIf="data.selecionado && !usuarioPublico" pButton type="button" label="Editar" (click)="salvarAgendamento()"></button>
+                <button *ngIf="!data.selecionado" pButton type="button" label="Salvar" (click)="salvarAgendamento()"></button>
+            </div>
+        </div>
+    </ng-template>
+</div>

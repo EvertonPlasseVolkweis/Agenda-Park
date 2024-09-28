@@ -1,0 +1,23 @@
+.calendar {
+    background-color: white;
+}
+
+.spinner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.botao-novo {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: end;
+    margin-bottom: 10px;
+}
+
+.margem {
+    padding: 3rem;
+}

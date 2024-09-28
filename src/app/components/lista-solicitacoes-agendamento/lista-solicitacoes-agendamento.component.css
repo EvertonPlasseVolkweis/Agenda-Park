@@ -1,0 +1,17 @@
+table {
+    width: 100%;
+}
+
+button {
+    margin: 16px 8px;
+}
+
+.espaçamento {
+    margin-bottom: 25px;
+    color: black;
+    margin-left: 300px;
+}
+
+.margem {
+    padding: 3rem;
+}

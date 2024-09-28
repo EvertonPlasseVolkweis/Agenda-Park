@@ -1,0 +1,54 @@
+.div-principal {
+    height: 100%;
+}
+
+.itens {
+    margin: 10px;
+}
+
+p {
+    color: white;
+    text-align: center;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+}
+
+.matcard {
+    background-color: #335b7c;
+    width: auto;
+    height: auto;
+    margin: 2%;
+}
+
+.matcard2 {
+    background-color: #3e6f97;
+    width: auto;
+    height: auto;
+}
+
+.p-inputtext-lg{
+    margin: 20px;
+    width: 350px;
+}
+
+.login {
+    font-size: 35px;
+    color: white;
+    margin: 30px;
+}
+
+.p-button-secondary {
+    margin: 20px;
+    width: 35%;
+}
+
+:host ::ng-deep .p-password input {
+    width: 350px;
+}
+
+    .logo {
+        width: 200px;
+    }

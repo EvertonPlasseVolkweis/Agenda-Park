@@ -1,0 +1,40 @@
+.div-principal {
+    height: 100%;
+    flex-grow: 1;
+    padding: 3em;
+    max-width: 100%;
+    max-height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("../../../assets/img/fundoLaboratorio.jpg");
+}
+
+.matcard {
+    background-color: rgb(35 54 69);
+    width: auto;
+    height: auto;
+}
+
+.p-inputtext-lg{
+    margin: 20px;
+    width: 350px;
+}
+
+.login {
+    font-size: 35px;
+    color: white;
+    margin: 30px;
+}
+
+.p-button-secondary {
+    margin: 20px;
+    width: 35%;
+}
+
+:host ::ng-deep .p-password input {
+    width: 350px;
+}
+
+    .logo {
+        width: 200px;
+    }

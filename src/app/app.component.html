@@ -1,0 +1,53 @@
+<div class="demo-app">
+    <div *ngIf="!location.href.endsWith('login') && !location.href.endsWith('registrar')" class="demo-app-sidebar">
+      <div class="demo-app-sidebar-section">
+        <!-- <mat-card class="mat-card">
+            <p-panelMenu class="menu" [model]="items"></p-panelMenu>
+        </mat-card> -->
+        <img class="logo" src="assets/img/BioparkEducaçãoWhite.png" (click)="navegar()">
+          <mat-expansion-panel [disabled]="true" [expanded]="true" hideToggle class="panel">
+            <mat-expansion-panel-header>
+              <mat-panel-title class="title">
+                <b>Menu</b>
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <div fxLayout="row">
+              <mat-icon>calendar_today</mat-icon>
+              <p [ngClass]="{selecionadoclasse: selecionadoAgenda}" (click)="clickItem1()">Agenda</p>
+            </div>
+            <div  fxLayout="row">
+              <mat-icon>help</mat-icon>
+              <p [ngClass]="{selecionadoclasse: selecionadoAjuda}" (click)="clickItem3()">Ajuda</p>
+            </div>
+            <div *ngIf="usuarioAdmin || usuarioLaboratorista" fxLayout="row">
+              <mat-icon>scatter_plot</mat-icon>
+              <p [ngClass]="{selecionadoclasse: selecionadoEquipamento}" (click)="clickItem4()">Equipamento</p>
+            </div>
+            <div *ngIf="usuarioAdmin || usuarioLaboratorista" fxLayout="row">
+              <mat-icon>account_balance</mat-icon>
+              <p [ngClass]="{selecionadoclasse: selecionadoPredio}" (click)="clickItem5()">Prédio</p>
+            </div>
+            <div *ngIf="usuarioAdmin || usuarioLaboratorista" fxLayout="row">
+              <mat-icon>opacity</mat-icon>
+              <p [ngClass]="{selecionadoclasse: selecionadoLab}" (click)="clickItem6()">Laboratório</p>
+            </div>
+            <div *ngIf="usuarioAdmin || usuarioLaboratorista" fxLayout="row">
+              <mat-icon>question_answer</mat-icon>
+              <p [ngClass]="{selecionadoclasse: selecionadoSolicitacoesUsuario}" (click)="clickItem7()">Solicitações</p>
+            </div>
+            <div *ngIf="usuarioAdmin || usuarioLaboratorista" fxLayout="row">
+              <mat-icon>question_answer</mat-icon>
+              <p [ngClass]="{selecionadoclasse: selecionadoSolicitacoesAgenda}" (click)="clickItem8()">Solicitações de Agendamento</p>
+            </div>
+            <div *ngIf="usuarioAdmin" fxLayout="row">
+              <mat-icon>person</mat-icon>
+              <p [ngClass]="{selecionadoclasse: selecionadoUsuarios}" (click)="clickItem9()">Usuários</p>
+            </div>
+          </mat-expansion-panel>
+      </div>
+    </div>
+  
+    <div class="demo-app-main">
+        <router-outlet></router-outlet>
+    </div>
+  </div>

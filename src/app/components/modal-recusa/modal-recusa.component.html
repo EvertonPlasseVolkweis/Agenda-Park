@@ -1,0 +1,13 @@
+<div class="spinner" *ngIf="loading; else elseBlock">
+    <mat-spinner></mat-spinner>
+</div>
+<ng-template #elseBlock>
+    <h4>Informe um Motivo para Recusar esta Solicitação</h4>
+    <form [formGroup]="formularioMotivo">
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Motivo</mat-label>
+            <input matInput formControlName="motivo">
+        </mat-form-field>
+    </form>
+    <button pButton type="button" label="Salvar" (click)="salvaMotivo()"></button>
+</ng-template>

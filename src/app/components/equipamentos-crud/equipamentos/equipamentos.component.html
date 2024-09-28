@@ -1,0 +1,100 @@
+<div class="margem">
+    <div class="espaçamento">
+        <h2>Cadastrar equipamentos</h2>
+    </div>
+    <div class="equips">
+        <form [formGroup]="formularioEquipamento">
+            <div class="grid p-fluid">
+                <div class="col-12 md:col-12">
+                    <div class="nome">
+                        <div class="p-inputgroup">
+                            <span class="p-float-label">
+                                <input formControlName="nome" type="text" pInputText id="nome">
+                                <label for="nome">Nome</label>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid p-fluid">
+                <div class="col-12 md:col-12">
+                    <div class="tipo">
+                        <div class="p-inputgroup">
+                            <span class="p-float-label">
+                                <input formControlName="tipo" type="text" pInputText id="tipo">
+                                <label for="tipo">Tipo</label>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid p-fluid">
+                <div class="col-12 md:col-12">
+                    <div class="marca">
+                        <div class="p-inputgroup">
+                            <span class="p-float-label">
+                                <input formControlName="marca" type="text" pInputText id="marca">
+                                <label for="marca">Marca</label>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid p-fluid">
+                <div class="col-12 md:col-12">
+                    <div class="modelo">
+                        <div class="p-inputgroup">
+                            <span class="p-float-label">
+                                <input formControlName="modelo" type="text" pInputText id="modelo">
+                                <label for="modelo">Modelo</label>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid p-fluid">
+                <div class="col-12 md:col-12">
+                    <div class="patrimonio">
+                        <div class="p-inputgroup">
+                            <span class="p-float-label">
+                                <input formControlName="patrimonio" type="text" pInputText id="patrimonio">
+                                <label for="patrimonio">Patrimônio</label>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid p-fluid">
+                <div class="col-12 md:col-12">
+                    <div class="localizacao">
+                        <div class="p-inputgroup">
+                            <span class="p-float-label">
+                                <input formControlName="localizacao" type="text" pInputText id="localizacao">
+                                <label for="localizacao">Localização</label>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid p-fluid">
+                <div class="col-12 md:col-12">
+                    <div class="status">
+                        <div class="p-inputgroup">
+                            <span class="p-float-label">
+                                <input formControlName="status" type="text" pInputText id="status">
+                                <label for="status">Status</label>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    
+    <div>
+        <div class="botoes">
+            <button (click)="telaTabelaEquipamento()" pButton type="button" label="Voltar" class="p-button-danger p-button-outlined"></button>
+            <button pButton type="button" label="Salvar" (click)="salvarEquipamento()" class="p-button-outlined"></button>
+        </div>
+    </div>
+</div>
